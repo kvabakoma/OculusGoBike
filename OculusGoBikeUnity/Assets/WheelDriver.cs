@@ -8,12 +8,19 @@ public class WheelDriver : MonoBehaviour
 	public float radius;
 	public Axis angularVelocityAxis;
 
+	float deltaOffset;
+
 	public enum Axis
 	{
 		X, Y, Z
 	}
 
 	Quaternion prevCtrlRotation;
+
+	public float GetDeltaOffset()
+	{
+		return deltaOffset;
+	}
 
 	void Start()
 	{
@@ -38,6 +45,9 @@ public class WheelDriver : MonoBehaviour
     void Update()
     {
 		Quaternion ctrlRotation = InputTracking.GetLocalRotation(controllerNode);
+#if UNITY_EDITOR
+		ctrlRotation = Quaternion.Euler(Time.time * 100000f / 360f, 0f, 0f);
+#endif
 		Quaternion deltaRotation = Quaternion.Inverse(prevCtrlRotation) * ctrlRotation;
 		
 		deltaRotation.ToAngleAxis(out float angle, out Vector3 axis);
@@ -49,9 +59,7 @@ public class WheelDriver : MonoBehaviour
 			angle *= -1f;
 		}
 		
-		float deltaOffset = (angle / 360.0f) * 2 * Mathf.PI * radius;
-		transform.position += new Vector3(deltaOffset, 0f);
-
+		deltaOffset = (angle / 360.0f) * 2 * Mathf.PI * radius;
 
 		prevCtrlRotation = ctrlRotation;
     }
