@@ -37,6 +37,11 @@ public class Spline : MonoBehaviour {
 		UpdateOnEdit();
 	}
 
+	private void Start()
+	{
+		CalculateLength();
+	}
+
 	public int PointCount()
 	{
 		return transform.childCount;
