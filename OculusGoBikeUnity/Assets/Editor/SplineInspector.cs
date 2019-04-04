@@ -30,7 +30,16 @@ public class SplineInspector : Editor
 		{
 			var point = new GameObject("Point");
 			point.transform.position = Vector3.zero;
+			int pointCount = curve.PointCount();
+			if(pointCount > 0 )
+			{
+				Transform prevPoint = curve.GetPoint(pointCount - 1);
+				point.transform.position = prevPoint.localPosition;
+				point.transform.localRotation = prevPoint.localRotation;
+			}
 			point.transform.SetParent(curve.transform, false);
+
+			Selection.activeGameObject = point;
 		}
 
 		EditorGUILayout.LabelField("Length: " + curve.Length.ToString());
