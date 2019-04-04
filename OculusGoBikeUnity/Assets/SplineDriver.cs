@@ -4,6 +4,8 @@ using UnityEngine;
 public class SplineDriver : MonoBehaviour {
 	public Spline spline;
 	public float angularDegreesPerSecond;
+	public bool applySplineRotation;
+
 	WheelDriver wheelDriver;
 	
 	private float progress = 0f;
@@ -29,7 +31,10 @@ public class SplineDriver : MonoBehaviour {
 		SplinePoint pointData = spline.GetPointOnSpline(progress, 1);
 
 		gameObject.transform.position = pointData.position;
-		Quaternion targetRotation = Quaternion.LookRotation(pointData.direction);
-		transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, angularDegreesPerSecond * Time.deltaTime);
+		if(applySplineRotation)
+		{
+			Quaternion targetRotation = Quaternion.LookRotation(pointData.direction);
+			transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, angularDegreesPerSecond * Time.deltaTime);
+		}
 	}
 }
