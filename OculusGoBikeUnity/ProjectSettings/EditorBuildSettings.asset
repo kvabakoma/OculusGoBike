@@ -5,7 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 54efac38ce4d69648af7de7848e8c88f
+  - enabled: 0
+    path: Assets/Coniferous forest/Demo/Demo.unity
+    guid: 8aad6afafa236b3498d05fd3d57c279f
+  - enabled: 1
+    path: Assets/Scenes/Art_02.unity
+    guid: e03468dd001ffc142b4db2d248a86de5
   m_configObjects: {}
