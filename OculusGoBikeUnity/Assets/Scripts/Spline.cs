@@ -143,6 +143,10 @@ public class Spline : MonoBehaviour {
 		return result;
 	}
 
+	public SplinePoint GetPointOnSpline(float t)
+	{
+		return GetPointOnSpline(t, 1);
+	}
 	public SplinePoint GetPointOnSpline(float t, int startSegment) {
 		SplinePoint pointData = new SplinePoint();
 		bool pointDataFound = false;

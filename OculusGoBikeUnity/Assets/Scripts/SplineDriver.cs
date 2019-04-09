@@ -28,7 +28,7 @@ public class SplineDriver : MonoBehaviour {
 		
 		progress = Mathf.Clamp(progress,0.0f,1.0f);
 
-		SplinePoint pointData = spline.GetPointOnSpline(progress, 1);
+		SplinePoint pointData = spline.GetPointOnSpline(progress);
 
 		gameObject.transform.position = pointData.position;
 		if(applySplineRotation)
