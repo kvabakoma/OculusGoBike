@@ -6,6 +6,7 @@ public class WheelDriver : MonoBehaviour
 {
 	public XRNode controllerNode;
 	public float radius;
+	public bool useAngularVelocity;
 	public Axis angularVelocityAxis;
 
 	float deltaOffset;
@@ -52,13 +53,15 @@ public class WheelDriver : MonoBehaviour
 		
 		deltaRotation.ToAngleAxis(out float angle, out Vector3 axis);
 
-
-		Vector3 angularVelocity = GetAngularVelocity();
-		if (angularVelocity[(int)angularVelocityAxis] < 0)
+		if (useAngularVelocity)
 		{
-			angle *= -1f;
+			Vector3 angularVelocity = GetAngularVelocity();
+			if (angularVelocity[(int)angularVelocityAxis] < 0)
+			{
+				angle *= -1f;
+			}
 		}
-		
+
 		deltaOffset = (angle / 360.0f) * 2 * Mathf.PI * radius;
 
 		prevCtrlRotation = ctrlRotation;
