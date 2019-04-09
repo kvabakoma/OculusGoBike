@@ -52,6 +52,16 @@ public class Spline : MonoBehaviour {
 		return transform.GetChild(index);
 	}
 
+	public int InternalPointCount()
+	{
+		return internalPoints.Length;
+	}
+
+	public Vector3 InternalPointPosition(int index)
+	{
+		return internalPoints[index].position;
+	}
+
 	void InterpolateInternalPoints() {
 		if(PointCount() < 2)
 		{
