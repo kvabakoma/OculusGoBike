@@ -12,9 +12,9 @@ public class SplineDriverPreview : MonoBehaviour
 	public float Step = 0.01f;
 
 	Spline curve;
-	
+#if UNITY_EDITOR
 	void Update()
-    {
+	{
 		if(curve == null)
 		{
 			SplineDriver driver = GetComponent<SplineDriver>();
@@ -25,9 +25,9 @@ public class SplineDriverPreview : MonoBehaviour
 		SplinePoint point = curve.GetPointOnSpline(t);
 		gameObject.transform.position = point.position;
 	}
-
 	public void UpdatePreview()
 	{
 		Update();
 	}
+#endif
 }
