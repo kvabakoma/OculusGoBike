@@ -55,7 +55,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 10000
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -221,8 +221,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controllerNode: 5
-  radius: 2
+  radius: 0.3
+  useAngularVelocity: 0
   angularVelocityAxis: 0
+  useFilter: 1
+  filter: 0.9
 --- !u!114 &4612973958218825404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -250,6 +253,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a755c7c1f4503a4e8439591effb374c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Progress: 0
+  Step: 0.01
 --- !u!1 &4612973958468333558
 GameObject:
   m_ObjectHideFlags: 0

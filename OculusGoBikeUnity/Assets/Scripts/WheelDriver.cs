@@ -8,8 +8,11 @@ public class WheelDriver : MonoBehaviour
 	public float radius;
 	public bool useAngularVelocity;
 	public Axis angularVelocityAxis;
+	public bool useFilter;
+	public float filter = 0.9f;
 
-	float deltaOffset;
+	float deltaOffset = 0;
+	float prevDeltaOffset = 0;
 
 	public enum Axis
 	{
@@ -62,7 +65,15 @@ public class WheelDriver : MonoBehaviour
 			}
 		}
 
-		deltaOffset = (angle / 360.0f) * 2 * Mathf.PI * radius;
+		float newDeltaOffset = (angle / 360.0f) * 2 * Mathf.PI * radius;
+		if(useFilter)
+		{
+			deltaOffset = (newDeltaOffset * filter) + (prevDeltaOffset * (1.0f - filter));
+			prevDeltaOffset = deltaOffset;
+		}else
+		{
+			deltaOffset = newDeltaOffset;
+		}
 
 		prevCtrlRotation = ctrlRotation;
     }
