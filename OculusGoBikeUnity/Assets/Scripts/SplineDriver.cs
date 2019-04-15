@@ -1,25 +1,23 @@
 using UnityEngine;
 
-[RequireComponent(typeof(WheelDriver))]
 public class SplineDriver : MonoBehaviour {
 	public Spline spline;
 	public float angularDegreesPerSecond;
 	public bool applySplineRotation;
-
-	WheelDriver wheelDriver;
 	
 	private float progress = 0f;
 
-	private void Start()
+	IMotionDriver motionDriver;
+	void Start()
 	{
-		wheelDriver = GetComponent<WheelDriver>();
+		motionDriver = GetComponent<IMotionDriver>();
 	}
 
 	void LateUpdate () {
 		if (spline == null) {
 			return;
 		}
-		float distance = wheelDriver.GetDeltaOffset();
+		float distance = motionDriver.GetDeltaOffset();
 		if (distance < float.Epsilon) {
 			return;
 		}

@@ -5185,7 +5185,12 @@ PrefabInstance:
     - target: {fileID: 131191313972604989, guid: 2a0ff383e6eb9f644ab4eaa58b462835,
         type: 3}
       propertyPath: mask.m_Bits
-      value: 0
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 5346458373561981143, guid: 2a0ff383e6eb9f644ab4eaa58b462835,
+        type: 3}
+      propertyPath: axisName
+      value: JoystickDriver
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a0ff383e6eb9f644ab4eaa58b462835, type: 3}

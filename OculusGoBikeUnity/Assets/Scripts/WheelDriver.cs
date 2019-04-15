@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.XR;
 
-public class WheelDriver : MonoBehaviour
+public class WheelDriver : MonoBehaviour, IMotionDriver
 {
 	public XRNode controllerNode;
 	public float radius;
