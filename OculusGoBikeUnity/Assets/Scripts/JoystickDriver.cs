@@ -3,6 +3,7 @@
 public class JoystickDriver : MonoBehaviour, IMotionDriver
 {
 	public string axisName;
+	public float editorDeltaSpeed = 0.1f;
 	float axisValue;
 
 	public float GetDeltaOffset()
@@ -11,6 +12,10 @@ public class JoystickDriver : MonoBehaviour, IMotionDriver
 	}
 	void Update()
 	{
+#if UNITY_EDITOR
+		axisValue = editorDeltaSpeed;
+#else
 		axisValue = Input.GetAxis(axisName);
+#endif
 	}
 }
