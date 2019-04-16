@@ -34,3 +34,10 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
+
+#KOLIO
+OculusGoBikeUnity/Assets/Coniferous forest/
+OculusGoBikeUnity/Assets/Grass Pack/
+OculusGoBikeUnity/Assets/Mobile_Grass_Package/
+OculusGoBikeUnity/Assets/PA Terrain/
