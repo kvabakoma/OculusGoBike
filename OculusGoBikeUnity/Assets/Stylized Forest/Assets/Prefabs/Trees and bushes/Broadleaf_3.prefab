@@ -18,7 +18,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967294
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &4000012572276496
 Transform:
@@ -50,7 +50,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000011694247070}
-  m_Mesh: {fileID: 61}
+  m_Mesh: {fileID: 43000012927111260}
 --- !u!23 &23000013164866510
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -60,7 +60,7 @@ MeshRenderer:
   m_GameObject: {fileID: 1000011694247070}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 0
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -68,8 +68,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 16}
-  - {fileID: 8}
+  - {fileID: 21000014148766930}
+  - {fileID: 21000012252540058}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -79,7 +79,7 @@ MeshRenderer:
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 1
+  m_ImportantGI: 0
   m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
@@ -103,7 +103,7 @@ CapsuleCollider:
   m_Height: 8.85
   m_Direction: 1
   m_Center: {x: 0, y: 4.33, z: 0}
---- !u!21 &8
+--- !u!21 &21000012252540058
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
@@ -123,19 +123,19 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpSpecMap:
-        m_Texture: {fileID: 2800000, guid: ee46cbff2fe4d534f97c5b61ae564165, type: 3}
+        m_Texture: {fileID: 2800000, guid: c0060f425b8960c4b927421d46ed1508, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 10787571cf5aa0845b17d36c1054ffcc, type: 3}
+        m_Texture: {fileID: 2800000, guid: 94929a6bbc287ad4fab931faf2e1d31b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ShadowTex:
-        m_Texture: {fileID: 2800000, guid: 009c4f80a6c20c24b9b3e53f48c18dcc, type: 3}
+        m_Texture: {fileID: 2800000, guid: ab0b8efcdbcde9a408448e08bb2c2c20, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TranslucencyMap:
-        m_Texture: {fileID: 2800000, guid: 63dfd7bcd4d8c0f47baf36ac15aeef63, type: 3}
+        m_Texture: {fileID: 2800000, guid: 8b621b365202bef4bb3149a306833662, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -149,7 +149,7 @@ Material:
     - _TranslucencyColor: {r: 0.4282006, g: 0.9705882, b: 0.15700689, a: 1}
     - _TreeInstanceColor: {r: 1, g: 1, b: 1, a: 1}
     - _TreeInstanceScale: {r: 1, g: 1, b: 1, a: 1}
---- !u!21 &16
+--- !u!21 &21000014148766930
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
@@ -169,15 +169,15 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpSpecMap:
-        m_Texture: {fileID: 2800000, guid: ee46cbff2fe4d534f97c5b61ae564165, type: 3}
+        m_Texture: {fileID: 2800000, guid: c0060f425b8960c4b927421d46ed1508, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 10787571cf5aa0845b17d36c1054ffcc, type: 3}
+        m_Texture: {fileID: 2800000, guid: 94929a6bbc287ad4fab931faf2e1d31b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TranslucencyMap:
-        m_Texture: {fileID: 2800000, guid: 63dfd7bcd4d8c0f47baf36ac15aeef63, type: 3}
+        m_Texture: {fileID: 2800000, guid: 8b621b365202bef4bb3149a306833662, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -188,7 +188,7 @@ Material:
     - _SpecColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _TreeInstanceColor: {r: 1, g: 1, b: 1, a: 1}
     - _TreeInstanceScale: {r: 1, g: 1, b: 1, a: 1}
---- !u!43 &61
+--- !u!43 &43000012927111260
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -371,7 +371,7 @@ MonoBehaviour:
   m_Name: Tree Data
   m_EditorClassIdentifier: 
   _uniqueID: 15975
-  materialHash: a2cc55d18ce7378ab4aa5eebb93bd17a-550813696
+  materialHash: 2b55234941c11b23e8dace3f2e6cdd01-550813696
   root:
     _uniqueID: 1
     seed: 117647
@@ -45990,7 +45990,7 @@ MonoBehaviour:
     parentID: 12962
     groupID: 4356
     _uniqueID: 15092
-  mesh: {fileID: 61}
-  optimizedSolidMaterial: {fileID: 16}
-  optimizedCutoutMaterial: {fileID: 8}
+  mesh: {fileID: 43000012927111260}
+  optimizedSolidMaterial: {fileID: 21000014148766930}
+  optimizedCutoutMaterial: {fileID: 21000012252540058}
   isInPreviewMode: 0
