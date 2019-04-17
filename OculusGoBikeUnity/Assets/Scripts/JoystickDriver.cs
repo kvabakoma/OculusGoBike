@@ -16,6 +16,7 @@ public class JoystickDriver : MonoBehaviour, IMotionDriver
 		axisValue = editorDeltaSpeed;
 #else
 		axisValue = Input.GetAxis(axisName);
+        //axisValue = .4f;
 #endif
-	}
+    }
 }
