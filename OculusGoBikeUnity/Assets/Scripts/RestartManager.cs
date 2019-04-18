@@ -1,13 +1,11 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class RestartManager : MonoBehaviour
+public class RestartManager : AxisButton
 {
-	public string axisName;
-
-	private void Update()
+	private void LateUpdate()
 	{
-		if(Input.GetAxis(axisName) > 0)
+		if(GetAxisDown())
 		{
 			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 		}

@@ -1,39 +1,26 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-[System.Serializable]
-public struct Award
-{
-	public string name;
-
-	public int defaultCount;
-
-	[HideInInspector]
-	public int count;
-
-	public GameObject visual;
-}
-
 public class AwardManager : MonoBehaviour
 {
 	public Transform spawnLocation;
-	public Award[] awards;
+	public Awards awardData;
 
 	void Start()
 	{
 		LoadAwards();
 
-		for (int i = 0; i < awards.Length; i++)
+		for (int i = 0; i < awardData.awards.Length; i++)
 		{
-			Debug.Log(awards[i].name + "\t" + awards[i].count);
+			Debug.Log(awardData.awards[i].name + "\t" + awardData.awards[i].count);
 		}
 	}
 
 	void LoadAwards()
 	{
-		for (int i = 0; i < awards.Length; i++)
+		for (int i = 0; i < awardData.awards.Length; i++)
 		{
-			awards[i].count = PlayerPrefs.GetInt(awards[i].name, awards[i].defaultCount);
+			awardData.awards[i].count = PlayerPrefs.GetInt(awardData.awards[i].name, awardData.awards[i].defaultCount);
 		}
 	}
 
@@ -43,9 +30,9 @@ public class AwardManager : MonoBehaviour
 	}
 	void SaveAwards(bool writeDefaults)
 	{
-		for (int i = 0; i < awards.Length; i++)
+		for (int i = 0; i < awardData.awards.Length; i++)
 		{
-			PlayerPrefs.SetInt(awards[i].name, (writeDefaults ? awards[i].defaultCount : awards[i].count));
+			PlayerPrefs.SetInt(awardData.awards[i].name, (writeDefaults ? awardData.awards[i].defaultCount : awardData.awards[i].count));
 		}
 		PlayerPrefs.Save();
 	}
@@ -58,9 +45,9 @@ public class AwardManager : MonoBehaviour
 	List<int> CollcetAwardIds()
 	{
 		List<int> awardIdList = new List<int>();
-		for (int awardId = 0; awardId < awards.Length; awardId++)
+		for (int awardId = 0; awardId < awardData.awards.Length; awardId++)
 		{
-			for (int i = 0; i < awards[awardId].count; i++)
+			for (int i = 0; i < awardData.awards[awardId].count; i++)
 			{
 				awardIdList.Add(awardId);
 			}
@@ -93,10 +80,10 @@ public class AwardManager : MonoBehaviour
 		int randIndex = Random.Range(0, awardsShuffled.Length);
 		int awardIndex = awardsShuffled[randIndex];
 
-		GameObject award = GameObject.Instantiate(awards[awardIndex].visual);
+		GameObject award = GameObject.Instantiate(awardData.awards[awardIndex].visual);
 		award.transform.SetParent(spawnLocation, false);
 
-		awards[awardIndex].count--;
+		awardData.awards[awardIndex].count--;
 
 		SaveAwards();
 	}
