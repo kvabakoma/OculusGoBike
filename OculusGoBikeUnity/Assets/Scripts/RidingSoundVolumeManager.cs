@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class RidingSoundVolumeManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public AudioSource RidingAudioSource;
+    public string axisName;
+    public float editorDeltaSpeed = 0.1f;
+    float axisValue;
 
-    // Update is called once per frame
+    public float GetDeltaOffset()
+    {
+        return axisValue;
+    }
     void Update()
     {
-        
+#if UNITY_EDITOR
+        axisValue = editorDeltaSpeed;
+#else
+		axisValue = Input.GetAxis(axisName);
+        //axisValue = .4f;
+#endif
+        RidingAudioSource.volume = axisValue;
     }
 }
