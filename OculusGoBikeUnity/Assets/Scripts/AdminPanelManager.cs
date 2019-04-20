@@ -15,8 +15,7 @@ public class AdminPanelManager : AxisButton
 	
     void LateUpdate()
     {
-		// if (GetAxisDown()) {
-		if (Input.GetAxisRaw("Oculus_CrossPlatform_PrimaryHandTrigger") != 0) {
+		if (GetAxisDown()) {
 			if(adminPanel.activeInHierarchy == true)
 			{
 				adminPanel.SetActive(false);
