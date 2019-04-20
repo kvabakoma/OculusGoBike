@@ -2,24 +2,27 @@
 using UnityEngine.XR;
 using UnityEngine.UI;
 
-public class Controller : AxisButton
+public class Controller : MonoBehaviour
 {
-	Button button = null;
+	public OVRInput.Button button;
+	public OVRInput.Controller controller;
+
+	Button buttonComponent = null;
 
 	void OnTriggerEnter(Collider other)
 	{
 		Button b = other.GetComponent<Button>();
 		if(b != null)
 		{
-			button = b;
+			buttonComponent = b;
 		}
 	}
 
 	void OnTriggerExit(Collider other)
 	{
-		if(button != null && other.gameObject == button.gameObject)
+		if(buttonComponent != null && other.gameObject == buttonComponent.gameObject)
 		{
-			button = null;
+			buttonComponent = null;
 		}
 	}
 	void LateUpdate()
@@ -27,11 +30,11 @@ public class Controller : AxisButton
 		Quaternion rot = InputTracking.GetLocalRotation(XRNode.RightHand);
 		transform.rotation = rot;
 
-		if (GetAxisDown())
+		if (OVRInput.GetDown(button, controller))
 		{
-			if (button)
+			if (buttonComponent)
 			{
-				button.onClick.Invoke();
+				buttonComponent.onClick.Invoke();
 			}
 		}
     }
