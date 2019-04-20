@@ -5256,11 +5256,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5793702f87776d048bfb698df496b943, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axisName: Cancel
   adminPanel: {fileID: 738684511}
   layer:
     serializedVersion: 2
     m_Bits: 1024
+  button: 1
+  controller: -1
 --- !u!81 &1003596862
 AudioListener:
   m_ObjectHideFlags: 0
@@ -13851,6 +13852,16 @@ PrefabInstance:
       propertyPath: internalPoints.Array.data[109].distToPoint
       value: 1286.5918
       objectReference: {fileID: 0}
+    - target: {fileID: 466708062680711550, guid: 5888bbf9646b50e4db9ac08a5bf189c6,
+        type: 3}
+      propertyPath: button
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 466708062680711550, guid: 5888bbf9646b50e4db9ac08a5bf189c6,
+        type: 3}
+      propertyPath: controller
+      value: -1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5888bbf9646b50e4db9ac08a5bf189c6, type: 3}
 --- !u!4 &1808650384 stripped
@@ -14005,7 +14016,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: effdf019f3c85b2449a30b9f220b4e26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axisName: Cancel
+  button: 8192
+  controller: -1
 --- !u!4 &1818227735 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6136343218404080559, guid: b86e0c0550f4dc346b36e0295983198b,

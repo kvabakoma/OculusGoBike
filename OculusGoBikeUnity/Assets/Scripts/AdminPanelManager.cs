@@ -1,10 +1,13 @@
 ﻿using UnityEngine;
 
 [RequireComponent(typeof(Camera))]
-public class AdminPanelManager : AxisButton
+public class AdminPanelManager : MonoBehaviour
 {
 	public GameObject adminPanel;
 	public LayerMask layer;
+
+	public OVRInput.Button button;
+	public OVRInput.Controller controller;
 
 	Camera cam;
 
@@ -13,9 +16,11 @@ public class AdminPanelManager : AxisButton
 		cam = GetComponent<Camera>();
     }
 	
-    void LateUpdate()
+    void Update()
     {
-		if (GetAxisDown()) {
+		OVRInput.Update();
+
+		if (OVRInput.GetDown(button, controller)) {
 			if(adminPanel.activeInHierarchy == true)
 			{
 				adminPanel.SetActive(false);
