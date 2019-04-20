@@ -4285,18 +4285,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1283097778}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &843817677 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6958531073956628418, guid: 5888bbf9646b50e4db9ac08a5bf189c6,
-    type: 3}
-  m_PrefabInstance: {fileID: 1800172910}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85d8c56e473854041a4a8ff7cac85840, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &850677703
 GameObject:
   m_ObjectHideFlags: 0
@@ -13903,30 +13891,11 @@ PrefabInstance:
       propertyPath: internalPoints.Array.data[109].distToPoint
       value: 1286.5918
       objectReference: {fileID: 0}
-    - target: {fileID: 8431365494574384178, guid: 5888bbf9646b50e4db9ac08a5bf189c6,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.2489449
-      objectReference: {fileID: 0}
-    - target: {fileID: 8431365494574384178, guid: 5888bbf9646b50e4db9ac08a5bf189c6,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1050.57
-      objectReference: {fileID: 0}
-    - target: {fileID: 9060006546002494888, guid: 5888bbf9646b50e4db9ac08a5bf189c6,
-        type: 3}
-      propertyPath: onExit
-      value: 
-      objectReference: {fileID: 843817677}
     - target: {fileID: 9060006546002494888, guid: 5888bbf9646b50e4db9ac08a5bf189c6,
         type: 3}
       propertyPath: onEnter
       value: 
       objectReference: {fileID: 743958784}
-    - target: {fileID: 27597111, guid: 5888bbf9646b50e4db9ac08a5bf189c6, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 15.97
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5888bbf9646b50e4db9ac08a5bf189c6, type: 3}
 --- !u!4 &1808650384 stripped
