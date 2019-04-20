@@ -15,7 +15,8 @@ public class AdminPanelManager : AxisButton
 	
     void LateUpdate()
     {
-		if (GetAxisDown()) {
+		// if (GetAxisDown()) {
+		if (Input.GetAxisRaw("ShowAdminUI") != 0) {
 			if(adminPanel.activeInHierarchy == true)
 			{
 				adminPanel.SetActive(false);
