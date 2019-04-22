@@ -37,7 +37,7 @@ public class ValueEditor : MonoBehaviour
 
 	void SaveValue(int val)
 	{
-		val = Mathf.Clamp(val, 0, defaultCount);
+		val = Mathf.Clamp(val, 0, defaultCount*2);
 		PlayerPrefs.SetInt(awardName, val);
 
 		value.text = val.ToString();

@@ -5,7 +5,7 @@ public class SplineDriver : MonoBehaviour {
 	public float angularDegreesPerSecond;
 	public bool applySplineRotation;
 	
-	private float progress = 0f;
+	public float progress = 0f;
 
 	IMotionDriver motionDriver;
 	void Start()
