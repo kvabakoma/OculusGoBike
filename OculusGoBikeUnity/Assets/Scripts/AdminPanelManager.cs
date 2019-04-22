@@ -25,11 +25,9 @@ public class AdminPanelManager : MonoBehaviour
 			{
 				adminPanel.SetActive(false);
 				cam.cullingMask = LayerMask.NameToLayer("Everything");
-				Time.timeScale = 1f;
 			} else {
 				adminPanel.SetActive(true);
 				cam.cullingMask = layer;
-				Time.timeScale = 0f;
 			}
 		}
 	}
