@@ -803,7 +803,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7030c1c52000d8d4cab0284f4caa7050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axisName: RestartLevel
+  button: 2
+  controller: -1
 --- !u!1 &6003891150901450836
 GameObject:
   m_ObjectHideFlags: 0
@@ -1333,6 +1334,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.3459
       objectReference: {fileID: 0}
+    - target: {fileID: 137749428059080986, guid: 8f0883179425be34b8e6b86690742a56,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d13b947fc4d90614ab8923ea766b7529, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f0883179425be34b8e6b86690742a56, type: 3}
 --- !u!1 &1560613720346611 stripped
@@ -5282,6 +5288,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3244216883504428069, guid: 2a0ff383e6eb9f644ab4eaa58b462835,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4612973958218825378, guid: 2a0ff383e6eb9f644ab4eaa58b462835,
         type: 3}
