@@ -5,9 +5,12 @@ public class ZoneEvents : MonoBehaviour
 	public CustomEvent onEnter;
 	public CustomEvent onExit;
 
+	public GameObject triggerObject;
+
+
 	void OnTriggerEnter(Collider other)
 	{
-		if(onEnter)
+		if(other.gameObject == triggerObject && onEnter)
 		{
 			onEnter.InvokeEvents();
 		}
@@ -15,7 +18,7 @@ public class ZoneEvents : MonoBehaviour
 
 	void OnTriggerExit(Collider other)
 	{
-		if (onExit)
+		if (other.gameObject == triggerObject && onExit)
 		{
 			onExit.InvokeEvents();
 		}

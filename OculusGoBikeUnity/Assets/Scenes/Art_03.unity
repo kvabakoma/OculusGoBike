@@ -13890,13 +13890,29 @@ PrefabInstance:
       propertyPath: onEnter
       value: 
       objectReference: {fileID: 7809230639098897484}
+    - target: {fileID: 9060006546002494888, guid: 5888bbf9646b50e4db9ac08a5bf189c6,
+        type: 3}
+      propertyPath: triggerObject
+      value: 
+      objectReference: {fileID: 1800172911}
     - target: {fileID: 6958531073956628418, guid: 5888bbf9646b50e4db9ac08a5bf189c6,
         type: 3}
       propertyPath: customEvents.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1235790562}
+    - target: {fileID: 74237509766468377, guid: 5888bbf9646b50e4db9ac08a5bf189c6,
+        type: 3}
+      propertyPath: triggerObject
+      value: 
+      objectReference: {fileID: 1800172911}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5888bbf9646b50e4db9ac08a5bf189c6, type: 3}
+--- !u!1 &1800172911 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8987652570936413412, guid: 5888bbf9646b50e4db9ac08a5bf189c6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1800172910}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1808650384 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: cfbaec74ad875df479d9ba38ee02378e,
