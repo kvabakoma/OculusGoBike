@@ -115,7 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a913ffeb7b5737479afe10a4d96de58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axisName: Horizontal
+  axisName: Vertical
   speedMultiplier: 2
   editorDeltaSpeed: 0.1
 --- !u!1 &270141964233132664
@@ -5358,12 +5358,12 @@ PrefabInstance:
     - target: {fileID: 4612973958218825378, guid: 2a0ff383e6eb9f644ab4eaa58b462835,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -136.48999
+      value: -136.49002
       objectReference: {fileID: 0}
     - target: {fileID: 4612973958218825378, guid: 2a0ff383e6eb9f644ab4eaa58b462835,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.071122564
+      value: 0.07112203
       objectReference: {fileID: 0}
     - target: {fileID: 4612973958218825378, guid: 2a0ff383e6eb9f644ab4eaa58b462835,
         type: 3}
@@ -5378,7 +5378,7 @@ PrefabInstance:
     - target: {fileID: 4612973958218825378, guid: 2a0ff383e6eb9f644ab4eaa58b462835,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9974676
+      value: 0.99746764
       objectReference: {fileID: 0}
     - target: {fileID: 4612973958218825378, guid: 2a0ff383e6eb9f644ab4eaa58b462835,
         type: 3}
@@ -5414,6 +5414,11 @@ PrefabInstance:
         type: 3}
       propertyPath: near clip plane
       value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 5346458373561981143, guid: 2a0ff383e6eb9f644ab4eaa58b462835,
+        type: 3}
+      propertyPath: axisName
+      value: Vertical
       objectReference: {fileID: 0}
     - target: {fileID: 5346458373561981143, guid: 2a0ff383e6eb9f644ab4eaa58b462835,
         type: 3}

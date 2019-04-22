@@ -5587,7 +5587,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RidingAudioSource: {fileID: 1003596866}
-  axisName: Horizontal
+  axisName: Vertical
   editorDeltaSpeed: 0.1
 --- !u!1001 &1014987262
 PrefabInstance:
@@ -13894,6 +13894,14 @@ PrefabInstance:
       propertyPath: onEnter
       value: 
       objectReference: {fileID: 7809230639098897484}
+    - target: {fileID: 27597111, guid: 5888bbf9646b50e4db9ac08a5bf189c6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 11.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 27597111, guid: 5888bbf9646b50e4db9ac08a5bf189c6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.08
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5888bbf9646b50e4db9ac08a5bf189c6, type: 3}
 --- !u!4 &1808650384 stripped
