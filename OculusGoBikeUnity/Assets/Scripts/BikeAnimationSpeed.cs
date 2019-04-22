@@ -7,6 +7,7 @@ public class BikeAnimationSpeed : MonoBehaviour
 
     Animator m_Animator;
     public string axisName;
+    public float speedMultiplier = 1;
     float axisValue;
     public float editorDeltaSpeed = 0.1f;
 
@@ -25,6 +26,6 @@ public class BikeAnimationSpeed : MonoBehaviour
 		axisValue = Input.GetAxis(axisName);
         //axisValue = .4f;
 #endif
-        m_Animator.speed = axisValue;
+        m_Animator.speed = axisValue * speedMultiplier;
     }
 }
