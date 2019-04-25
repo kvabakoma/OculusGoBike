@@ -86,5 +86,27 @@ public class AwardManager : MonoBehaviour
 		awardData.awards[awardIndex].count--;
 
 		SaveAwards();
+
+        /*if (awardIndex < 4)
+        {
+            GameObject.FindWithTag("FireWorkds").gameObject.SetActive(true);
+            Debug.Log("activated Fireworkds");
+        }*/
+        
 	}
+
+#if UNITY_EDITOR
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            ResetAwards();
+            for (int i = 0; i < awardData.awards.Length; i++)
+            {
+                Debug.Log(awardData.awards[i].name + "\t" + awardData.awards[i].count);
+            }
+        }
+    }
+#endif
+
 }

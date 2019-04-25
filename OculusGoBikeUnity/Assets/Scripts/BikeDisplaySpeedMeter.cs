@@ -17,11 +17,6 @@ public class BikeDisplaySpeedMeter : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        //Debug.Log(MySplineDriver.progress);
-        //Debug.Log(Bike.transform.position);
-        //float dist = Vector3.Distance(Chest.transform.position, Bike.transform.position);
-        //Debug.Log(transform.position + " | " + Chest.transform.position + " | " + dist);    
-        Debug.Log(Mathf.Floor(Time.timeSinceLevelLoad) % 60);
         string mins = "00";
         if (Time.timeSinceLevelLoad / 60 > 1)
         {

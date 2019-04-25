@@ -1019,6 +1019,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VfxBoomFireworks
       objectReference: {fileID: 0}
+    - target: {fileID: 1529346900646540, guid: f84c9d08380504b3cacfb91e6a345927, type: 3}
+      propertyPath: m_TagString
+      value: FireWorkds
+      objectReference: {fileID: 0}
     - target: {fileID: 4282450904195556, guid: f84c9d08380504b3cacfb91e6a345927, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
